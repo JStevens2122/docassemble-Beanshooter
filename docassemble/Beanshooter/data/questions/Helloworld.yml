@@ -1,0 +1,19 @@
+question: |
+  Hello ${ user_name }
+subquestion: |
+  ${ secret_message }
+mandatory: True
+---
+question: |
+  What is your name?
+fields:
+  - Name: user_name
+---
+ secret_message = "don't live long and prosper"
+ ---
+code: |
+  if user_name == "Spock":
+    secret_message = "live long and prosper"
+    second_message = "2"
+  else:
+    secret_message = "No secret message to report"
